@@ -100,7 +100,7 @@ Are there any surprising results?
 Your label should be short, informative, and shouldn't include spaces.
 It also shouldn't repeat a previous label, otherwise R Markdown will give you an error about repeated R chunk labels.
 
-```{r label-me-1}
+```{r frequencyadultbooking}
 # add code here
 # pay attention to correctness and code style
 ```
