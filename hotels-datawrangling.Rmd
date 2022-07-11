@@ -1,7 +1,9 @@
 ---
 title: "Hotel bookings - data wrangling"
-author: "Mine Çetinkaya-Rundel"
+author: "Kevin Diegel"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r load-pkg, message = FALSE}
