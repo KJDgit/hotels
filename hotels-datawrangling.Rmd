@@ -73,7 +73,7 @@ Test your intuition.
 Using `filter()` determine the number of bookings in resort hotels that have more than 1 child **or** baby in the room?
 Then, do the same for city hotels, and compare the numbers of rows in the resulting filtered data frames.
 
-```{r resort-children}
+```{r resort-children, eval=TRUE}
 hotels %>%
   filter(
     hotel == "Resort Hotel",
@@ -81,7 +81,7 @@ hotels %>%
     )
 ```
 
-```{r city-children}
+```{r city-children, eval=TRUE}
 hotels %>%
   filter(
     hotel == "City Hotel",
@@ -100,9 +100,10 @@ Are there any surprising results?
 Your label should be short, informative, and shouldn't include spaces.
 It also shouldn't repeat a previous label, otherwise R Markdown will give you an error about repeated R chunk labels.
 
-```{r frequencyadultbooking}
-# add code here
-# pay attention to correctness and code style
+```{r frequencyadultbooking, eval=TRUE}
+hotels %>%
+  count(adults) %>%
+  arrange(desc(n))
 ```
 
 ### Exercise 6.
@@ -112,10 +113,20 @@ What does this reveal about the surprising results you spotted in the previous e
 
 **Note:** Don't forget to label your R chunk as well (where it says `label-me-2`).
 
-```{r label-me-2}
-# add code here
-# pay attention to correctness and code style
+```{r is_canceled_1, eval=TRUE}
+hotels %>%
+  filter(is_canceled >= 1) %>%
+  count(adults) %>%
+  arrange(desc(n))
 ```
+
+```{r is canceled_0, eval=TRUE}
+hotels %>%
+  filter(is_canceled <= 0) %>%
+  count(adults) %>%
+  arrange(desc(n))
+```
+
 
 ### Exercise 7.
 
